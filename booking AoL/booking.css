@@ -1,0 +1,225 @@
+/* General styling for body, header, and footer */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #004d99;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin-right: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #004d99;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+}
+
+.footer-nav ul li {
+    margin: 0 10px;
+}
+
+.footer-nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    height: 24px;
+    width: 24px;
+}
+
+/* Main content styling */
+main {
+    padding: 20px;
+}
+
+.section {
+    margin: 40px 0;
+}
+
+.section h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: #20A8D8;
+}
+
+.section h2 span {
+    flex: 1;
+    height: 1px;
+    background-color: #015581;
+    margin: 0 10px;
+}
+
+.section h2 span:before,
+.section h2 span:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 100px;
+    height: 2px;
+    background-color: #004d99;
+}
+
+.section h2 span:before {
+    right: 100%;
+    margin-right: 10px;
+}
+
+.section h2 span:after {
+    left: 100%;
+    margin-left: 10px;
+}
+
+/* Carousel styling */
+.carousel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-track {
+    display: flex;
+    overflow: hidden;
+    width: 80%;
+}
+
+.carousel-slide {
+    display: flex;
+}
+
+.carousel-item {
+    min-width: 200px;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.carousel-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.facility-details {
+    margin-top: 10px;
+}
+
+.facility-details h3 {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.facility-details p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.facility-details img {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.detail-btn {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #004d99;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.detail-btn:hover {
+    background-color: #003366;
+}
+
+.prev-btn,
+.next-btn {
+    background-color: #004d99;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.carousel-dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.carousel-dots .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.carousel-dots .dot.active {
+    background-color: #004d99;
+}
+
+/* Specific adjustments for booking page */
+.facility-details img {
+    width: 12px; /* Smaller icon size */
+    height: 12px;
+}

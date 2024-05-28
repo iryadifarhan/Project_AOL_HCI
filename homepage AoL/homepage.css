@@ -1,0 +1,286 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    background-color: #fff;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo img {
+    height: 50px;
+    margin-left: 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    padding-right: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #20A8D8;
+}
+
+main {
+    flex: 1;
+    padding-top: 70px; /* Offset for fixed header */
+}
+
+.opening {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.opening img {
+    max-width: 100%;
+    width: 80%;
+    height: auto;
+    margin-left: 20px;
+    margin-right: 200px;
+}
+
+.opening-text h1 {
+    margin-top: 0;
+    color: #000;
+}
+
+.opening-text p {
+    text-align: justify;
+}
+
+.facilities-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.facilities-section h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: #20A8D8;
+}
+
+.facilities-section h2 span {
+    flex: 1;
+    height: 1px;
+    background-color: #015581;
+    margin: 0 10px;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-slide {
+    display: flex;
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.carousel-item {
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 300px; /* Tinggi gambar disesuaikan */
+    object-fit: cover; /* Gambar akan menyesuaikan ukuran kontainer tanpa merubah rasio aspek */
+    display: block;
+}
+
+
+.detail-btn {
+    margin-top: 20px;
+    padding: 10px 30px; /* Adjust padding to make the button larger */
+    background-color: #fff; /* Background color white */
+    color: #015581; /* Border and text color */
+    border: 2px solid #015581; /* Border color and width */
+    border-radius: 5px; /* Optional: Add border radius for rounded corners */
+    font-size: 16px; /* Adjust font size if needed */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition for smooth hover effect */
+    font-weight: bold;
+}
+
+.detail-btn:hover {
+    background-color: #015581;
+    color: #fff;
+}
+
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 45%;
+    transform: scale(0.9);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 5px; /* Reduced padding */
+    cursor: pointer;
+    z-index: 100; /* Ensure z-index is high enough */
+    width: 40px; /* Reduced width */
+    height: 50px; /* Reduced height */
+    background-size: cover;
+    background-position: center;
+}
+
+.prev-btn img, .next-btn img {
+    width: 30px;;
+    height: 0px; /* Adjust as necessary */
+    transition: transform 0.3s ease;
+}
+
+.prev-btn:hover img, .next-btn:hover img {
+    transform: scale(1.2); /* Enlarge icon on hover */;
+}
+
+.prev-btn {
+    left: 10px;
+    background-image: url('../assets/assets homepage/Property\ 1=ArrowLeft.png');
+}
+
+.next-btn {
+    right: 10px;
+    background-image: url('../assets/assets homepage/Property\ 1=ArrowRight.png');
+}
+
+.prev-btn:hover {
+    background-image: url('../assets/assets homepage/Property\ 1=ArrowLeftClicked.png');
+}
+
+.next-btn:hover {
+    background-image: url('../assets/assets homepage/Property\ 1=ArrowRightClicked.png');
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dot:hover {
+    color: #A2E3F9;
+}
+
+.active-dot {
+    background-color: #20A8D8;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+body.slide-1 {
+    background-color: #fff; /* Ganti dengan warna latar belakang yang sesuai dengan slide 1 */
+}
+
+body.slide-2 {
+    background-color: #fff; /* Ganti dengan warna latar belakang yang sesuai dengan slide 2 */
+}
+
+footer {
+    background-color: #404A49;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+.footer-content img {
+    max-width: 100px;
+    margin-bottom: 0px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    margin: 10px 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-icons img {
+    height: 24px; /* Adjust the size of the icons here */
+    margin-right: 5px; /* Add some space between the icon and text */
+}
+
+.social-icons a:hover {
+    text-decoration: underline;
+}
+
+.footer-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+.footer-nav ul li {
+    padding: 0 15px;
+}
+
+.footer-nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.footer-nav ul li a:hover {
+    text-decoration: underline;
+}
