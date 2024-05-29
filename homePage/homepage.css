@@ -144,7 +144,7 @@ header {
 .facilities-section h2 span {
     flex: 1;
     height: 3px;
-    max-width: 446px;
+    max-width: 406px;
     background-color: #20A8D8;
     margin: 0 10px;
 }
