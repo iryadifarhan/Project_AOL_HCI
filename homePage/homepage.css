@@ -124,17 +124,6 @@ header {
     max-width: 520px;
 }
 
-.imageContainer{
-    position: relative;
-}
-
-#youtubeLogo{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 .facilities-section {
     position: relative;
     text-align: center;
