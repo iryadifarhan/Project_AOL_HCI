@@ -10,29 +10,46 @@
 <body>
     <header>
         <div class="logo">
-            <img src="../assets/assets global/HomeLogo.png" alt="BINUS University Logo"> <!-- Ganti dengan logo BINUS -->
+            <a href="./homepage.html"><img src="../assets/assets global/HomeLogo.png" alt="BINUS University Logo"></a> <!-- Ganti dengan logo BINUS -->
         </div>
         <nav class="navbar">
             <ul>
-                <li><a href="./homepage.html">Home</a></li>
-                <li><a href="../bookingPage/booking.html">Booking</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a class="active" href="./homepage.html">Home</a></li>
+                <li><a class="nonActive" href="../bookingPage/booking.html">Booking</a></li>
+                <li><a class="nonActive" href="#">Contact Us</a></li>
+                <li><img src="../assets/assets global/profileNav.png" alt=""></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <div class="opening">
-            <img src="../assets/assets homepage/image 1.png" alt="Opening Image"> <!-- Ganti dengan gambar opening -->
+            <img src="../assets/assets homepage/BackgroundImage1.png" alt="Opening Image"> <!-- Ganti dengan gambar opening -->
             <div class="opening-text">
                 <h1>Binus @Bekasi Booking Facility</h1>
-                <p>Wahana mencerdaskan kehidupan bangsa bernegeara dengan menjunjung nilai luhur pancasila dan UUD 1945 sesuai dengan jiwa sumpah pemuda atas perjuangan bangsa indonesia</p>
+            </div>
+            <div class="discButtons">
+                <img src="../assets/assets global/DiscActive.png" alt="">
+                <img src="../assets/assets homepage/DiscHeader.png" alt="">
+                <img src="../assets/assets homepage/DiscHeader.png" alt="">
             </div>
         </div>
+
+        <div class="descriptionContainer">
+            <div class="textContainer">
+                <h1>Welcome to Binus @Bekasi Facility</h1>
+                <p>Platform booking Facility menjadi platform resmi untuk memudahkan mahasiswa dan staf dalam mengakses berbagai fasilitas pendukung di kampus BINUS @Bekasi. </p>
+            </div>
+            <div class="imageContainer">
+                <img src="../assets/assets homepage/MrGatot.png" alt="">
+                <img id="youtubeLogo" src="../assets/assets homepage/mdi_youtube.png" alt="">
+            </div>
+        </div>
+
         <div class="facilities-section">
             <h2><span></span>Our Best Facilities<span></span></h2>
+            <button class="prev-btn"></button>
             <div class="carousel">
-                <button class="prev-btn"></button>
                 <div class="carousel-track">
                     <div class="carousel-slide">
                         <div class="carousel-item">
@@ -77,12 +94,12 @@
                         </div>
                     </div>
                 </div>
-                <button class="next-btn"></button>
             </div>
+            <button class="next-btn"></button>
             <div class="carousel-dots">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
             </div>
         </div>
     </main>
