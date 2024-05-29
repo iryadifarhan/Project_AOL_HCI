@@ -139,6 +139,7 @@ header {
     position: relative;
     text-align: center;
     margin: 120px 0;
+    margin-bottom: 80px;
     padding: 0 80px;
 }
 
@@ -250,7 +251,7 @@ header {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin: 30px 0;
+    margin: 40px 0;
 }
 
 .dot{
@@ -261,10 +262,25 @@ header {
 }
 
 .active-dot {
-    background-image: url('../assets/assets global/DiscActive.png');
+    background-image: url('../assets/assets global/DiscActive.png') !important;
 }
 
 .dot:hover{
+    background-image: url('../assets/assets global/DiscHover.png');
+}
+
+.disc{
+    cursor: pointer;
+    width: 33px;
+    height: 33px;
+    background-image: url('../assets/assets homepage/DiscHeader.png');
+}
+
+.active-disc {
+    background-image: url('../assets/assets global/DiscActive.png') !important;
+}
+
+.disc:hover{
     background-image: url('../assets/assets global/DiscHover.png');
 }
 
@@ -290,12 +306,13 @@ footer {
 }
 
 .footer-content img {
-    max-width: 100px;
+    height: 98px;
     margin-bottom: 0px;
 }
 
 .social-icons {
     display: flex;
+    gap: 25px;
     justify-content: center;
     margin-bottom: 10px;
 }
@@ -303,13 +320,13 @@ footer {
 .social-icons a {
     display: flex;
     align-items: center;
-    margin: 10px 10px;
+    margin: 15px 10px;
     color: #fff;
     text-decoration: none;
 }
 
 .social-icons img {
-    height: 24px; /* Adjust the size of the icons here */
+    height: 35px; /* Adjust the size of the icons here */
     margin-right: 5px; /* Add some space between the icon and text */
 }
 
@@ -320,21 +337,27 @@ footer {
 .footer-nav ul {
     list-style: none;
     display: flex;
+    gap: 8px;
     justify-content: center;
     margin-bottom: 10px;
     padding: 0;
 }
 
-.footer-nav ul li {
-    padding: 0 15px;
+.footer-nav ul li{
+    width: 133px;
 }
 
 .footer-nav ul li a {
     text-decoration: none;
     color: #fff;
-    font-weight: bold;
+    font-size: 1.5em;
 }
 
 .footer-nav ul li a:hover {
     text-decoration: underline;
+}
+
+#trademarks{
+    margin: 0;
+    font-size: 1.2em;
 }
