@@ -16,7 +16,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     }
 
     // If validation passes, redirect to homepage (example redirection)
-    window.location.href = 'homepage.html'; // Replace with your actual homepage URL
+    window.location.href = '../homePage/homepage.html'; // Replace with your actual homepage URL
 });
 
 function isValidEmail(email) {
