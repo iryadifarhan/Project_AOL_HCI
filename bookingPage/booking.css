@@ -6,14 +6,22 @@ body {
 
 header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #004d99;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    background-color: #fff;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .logo img {
-    height: 50px;
+    height: 98px;
+    margin-left: 50px;
 }
 
 .navbar ul {
@@ -21,54 +29,97 @@ header {
     display: flex;
     margin: 0;
     padding: 0;
+    gap: 62px;
+    align-items: center;
 }
 
-.navbar ul li {
-    margin-right: 20px;
+.navbar ul li:last-child{
+    margin-right: 50px;
 }
 
 .navbar ul li a {
-    color: white;
     text-decoration: none;
-    font-weight: bold;
+    color: #000;
+    transition: color 0.3s ease;
+    font-size: 1.5em;
 }
+
+.navbar ul li a.active{
+    color: #20A8D8;
+}
+
+.navbar ul li a.active:hover{
+    text-decoration: underline;
+}
+
+.navbar ul li a.nonActive:hover {
+    color: #20A8D8;
+}
+
 
 footer {
-    background-color: #004d99;
-    color: white;
+    background-color: #404A49;
+    color: #fff;
     text-align: center;
     padding: 20px 0;
+    margin-top: auto;
 }
 
-.footer-content {
+.footer-content img {
+    height: 98px;
+    margin-bottom: 0px;
+}
+
+.social-icons {
     display: flex;
-    flex-direction: column;
+    gap: 25px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    display: flex;
     align-items: center;
+    margin: 15px 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-icons img {
+    height: 35px; /* Adjust the size of the icons here */
+    margin-right: 5px; /* Add some space between the icon and text */
+}
+
+.social-icons a:hover {
+    text-decoration: underline;
 }
 
 .footer-nav ul {
     list-style: none;
-    padding: 0;
-    margin: 10px 0;
     display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding: 0;
 }
 
-.footer-nav ul li {
-    margin: 0 10px;
+.footer-nav ul li{
+    width: 133px;
 }
 
 .footer-nav ul li a {
-    color: white;
     text-decoration: none;
+    color: #fff;
+    font-size: 1.5em;
 }
 
-.social-icons a {
-    margin: 0 10px;
+.footer-nav ul li a:hover {
+    text-decoration: underline;
 }
 
-.social-icons img {
-    height: 24px;
-    width: 24px;
+#trademarks{
+    margin: 0;
+    font-size: 1.2em;
 }
 
 /* Main content styling */

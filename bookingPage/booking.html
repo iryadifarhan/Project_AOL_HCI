@@ -11,13 +11,14 @@
 <body>
     <header>
         <div class="logo">
-            <img src="../assets/assets global/HomeLogo.png" alt="BINUS University Logo">
+            <a href="../homePage/homepage.html"><img src="../assets/assets global/HomeLogo.png" alt="BINUS University Logo"></a> <!-- Ganti dengan logo BINUS -->
         </div>
         <nav class="navbar">
             <ul>
-                <li><a href="../homePage/homepage.html">Home</a></li>
-                <li><a href="../bookingPage/booking.html">Booking</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a class="nonActive" href="../homePage/homepage.html">Home</a></li>
+                <li><a class="active" href="../bookingPage/booking.html">Booking</a></li>
+                <li><a class="nonActive" href="#">Contact Us</a></li>
+                <li><img src="../assets/assets global/profileNav.png" alt=""></li>
             </ul>
         </nav>
     </header>
@@ -158,7 +159,7 @@
 
     <footer>
         <div class="footer-content">
-            <img src="../assets/assets global/HomeLogo.png" alt="Footer Logo">
+            <a href="../homePage/homepage.html"><img src="../assets/assets global/HomeLogo.png" alt="Footer Logo"></a>
             <nav class="footer-nav">
                 <ul>
                     <li><a href="../homePage/homepage.html">Home</a></li>
@@ -177,7 +178,7 @@
                     <img src="../assets/footer icon/Vector-2.png" alt="LinkedIn Icon">
                 </a>
             </div>
-            <p>Copyright &copy; 2024 Student Support Office | Bina Nusantara University</p>
+            <p id="trademarks">Copyright &copy; 2024 Student Support Office | Bina Nusantara University</p>
         </div>
     </footer>
 
