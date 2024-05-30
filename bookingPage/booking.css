@@ -8,7 +8,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 50px;
+    padding-top: 25px;
     padding-bottom: 10px;
     background-color: #fff;
     width: 100%;
@@ -79,6 +79,8 @@ footer {
 
 .social-icons a {
     display: flex;
+    justify-content: center;
+    min-width: 50px;
     align-items: center;
     margin: 15px 10px;
     color: #fff;
