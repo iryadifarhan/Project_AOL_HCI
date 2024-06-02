@@ -1,0 +1,210 @@
+/*start header footer*/
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    background-color: #fff;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo img {
+    height: 98px;
+    margin-left: 50px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 62px;
+    align-items: center;
+}
+
+.navbar ul li:last-child{
+    margin-right: 50px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s ease;
+    font-size: 1.5em;
+}
+
+.navbar ul li a.active{
+    color: #20A8D8;
+}
+
+.navbar ul li a.active:hover{
+    text-decoration: underline;
+}
+
+.navbar ul li a.nonActive:hover {
+    color: #20A8D8;
+}
+
+
+footer {
+    background-color: #404A49;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+.footer-content img {
+    height: 98px;
+    margin-bottom: 0px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    display: flex;
+    justify-content: center;
+    min-width: 50px;
+    align-items: center;
+    margin: 15px 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-icons img {
+    height: 35px; /* Adjust the size of the icons here */
+    margin-right: 5px; /* Add some space between the icon and text */
+}
+
+.social-icons a:hover {
+    text-decoration: underline;
+}
+
+.footer-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+.footer-nav ul li{
+    width: 133px;
+}
+
+.footer-nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.footer-nav ul li a:hover {
+    text-decoration: underline;
+}
+
+#trademarks{
+    margin: 0;
+    font-size: 1.2em;
+}
+/*end header footer*/
+/* container address email whatsapp*/
+.container { /*bagian address whatsapp dan email */
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-image: url("image 13.png");
+    background-color: #ccc;
+    background-size: cover;
+    background-position: center;
+}
+.background-contact-info{ /* abu2 background*/
+    max-width: 80%;
+    background-color: #404a4981;
+    /* opacity: 0.5; */
+    margin: 0 auto;
+}
+.contact-info {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 40px 20px;
+    margin: 0 auto;
+    color: white;
+}
+.contact-info div {
+    flex: 1;
+    padding: 20px;
+}
+.contact-info div:not(:last-child) {
+    border-right: 1px solid #fff;
+}
+.contact-info div h3 {
+    margin: 10px 0;
+}
+.contact-form {
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 350px;
+    margin-right: 350px;
+    padding: 20px;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+}
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.contact-form input[type="checkbox"] {
+    width: auto;
+    border: 5px solid black;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+.contact-form button {
+    margin-top: 20px;
+    padding: 20px 60px; /* Adjust padding to make the button larger */
+    background-color: #fff; /* Background color white */
+    color: #32766E; /* Border and text color */
+    border: 5px solid #015581; /* Border color and width */
+    border-radius: 10px; /* Optional: Add border radius for rounded corners */
+    font-size: 2em; /* Adjust font size if needed */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-bottom: 50px;
+}
+.contact-form button:hover {
+    background-color: #015581;
+    color: #fff;
+}
+.contact-form h1{
+    font-weight: 1000;
+    color: black;
+}
+.contact-form h2{
+    text-align: left;
+    color: #20A8D8;
+}
+/*end container address email whatsapp*/
+
+

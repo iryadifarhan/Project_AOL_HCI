@@ -124,6 +124,191 @@ footer {
 }
 
 /* Section */
+
+/* Reservation Form */
+.reservationForm{
+    margin: 25px 120px;
+}
+
+.reservationForm h1{
+    font-size: 2.5em;
+}
+
+.inputContainer h2{
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.boxContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputBox{
+    width: 570px;
+    height: 64px;
+    border: solid 2px black;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.inputBox img{
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.inputBox .placeholder{
+    display: inline-block;
+    vertical-align: 11px;
+    margin: 0;
+    margin-left: 20px;
+    color: #000000a4;
+}
+
+/* Calender */
+.wrapper{
+    width: 570px;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    border: solid 2px black;
+}
+
+.wrapper ul{
+    padding: 0;
+}
+
+.wrapper .header{  
+  text-align: center;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  padding: 5px;
+  justify-content: space-between;
+  background-color: #20A8D8;
+  color: white;
+}
+
+.wrapper .icons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 30px;
+}
+.header .icons span:hover{
+  background: #878787;
+}
+.current-date,.selected-date{
+  font-size: 1.45rem;
+  font-weight: bolder;
+}
+
+.selected-date{
+    font-size: 1.7em;
+}
+
+.calendar{
+  padding: 0 20px ;
+}
+.calendar ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+}
+.calendar .days{
+  margin-bottom: 20px;
+}
+.calendar li{
+  color: #333;
+  width: calc(100% / 7);
+  font-size: 1.07rem;
+}
+.calendar .weeks li{
+  font-weight: bolder;
+  cursor: default;
+}
+
+.calendar .weeks li:last-child{
+    color: red;
+}
+
+.calendar .days li{
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  margin-top: 30px;
+}
+.days li.inactive{
+  color: #aaa;
+}
+.days li.active{
+  color: #fff;
+}
+.days li::before{
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  height: 40px;
+  width: 40px;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.days li.active::before{
+  border: solid 3px #20A8D8;
+}
+.days li:not(.active):hover::before{
+  background: #f2f2f2;
+}
+
+#holiday{
+    color: red;
+}
+
+.days li.selected::before{
+    background-color: #20A8D8 !important;
+}
+
+#prev, #next {
+    transform: scale(0.5);
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+    border: none;
+    padding: 5px; /* Reduced padding */
+    cursor: pointer;
+    z-index: 100; /* Ensure z-index is high enough */
+    width: 40px; /* Reduced width */
+    height: 50px; /* Reduced height */
+    background-size: cover;
+    background-position: center;
+}
+
+#prev:hover, #next:hover {
+    transform: scale(0.7); /* Enlarge icon on hover */;
+}
+
+#prev {
+    top: 35%;
+    left: 20px;
+    background-image: url('../assets/assets homepage/Property\ 1=ArrowLeft.png');
+}
+
+#next {
+    top: 35%;
+    right: 20px;
+    background-image: url('../assets/assets homepage/Property\ 1=ArrowRight.png');
+}
+
+#prev:hover {
+    background-image: url('../assets/assets homepage/Property\ 1=ArrowLeftClicked.png');
+}
+
+#next:hover {
+    background-image: url('../assets/assets homepage/Property\ 1=ArrowRightClicked.png');
+}
+
+/* Carousel */
 .facilityDetailContainer{
     display: flex;
     align-items: center;
