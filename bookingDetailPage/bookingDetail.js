@@ -84,7 +84,7 @@ const renderCalendar = () => {
     let count = 0
 
     for (let i = firstDayofMonth; i > 0; i--) { // creating li of previous month last days
-        liTag += `<li class="inactive">${lastDateofLastMonth - i + 1}</li>`;
+        liTag += `<li class="inactive prev-month">${lastDateofLastMonth - i + 1}</li>`;
         count++;
     }
 
@@ -102,7 +102,7 @@ const renderCalendar = () => {
     }
 
     for (let i = 1; i <= 42-count; i++) { // creating li of next month first days
-        liTag += `<li class="inactive">${i}</li>`
+        liTag += `<li class="inactive next-month">${i}</li>`
     }
 
     daysTag.innerHTML = liTag;
@@ -110,7 +110,7 @@ const renderCalendar = () => {
     currentDate.innerText = `${months[currMonth]}`
 
     //select date
-    items = document.querySelectorAll(".days li:not(.inactive)")
+    items = document.querySelectorAll(".days li")
     for (let i = 0; i < items.length; i++) {
         const item = items[i];
         item.addEventListener("click", changeActiveClass);
@@ -122,6 +122,19 @@ const renderCalendar = () => {
           const item = items[i];
           item.classList.remove('selected');
         }
+        if(e.target.classList.contains("prev-month")){
+            currMonth -= 1;
+            if (currMonth < 0) {
+                currMonth = 11;
+                currYear -= 1;
+            }
+        }else if(e.target.classList.contains("next-month")){
+            currMonth += 1;
+            if (currMonth > 11) {
+                currMonth = 0;
+                currYear += 1;
+            }
+        }
         e.target.classList.add('selected');
         dateSelected =  Number(e.target.innerText);
         monthSelected = currMonth;
@@ -130,7 +143,8 @@ const renderCalendar = () => {
         daySelected = new Date(dateFormat).getDay()
 
         selectedDate.innerText = `${yearSelected}, ${weekday[daySelected]} ${months[monthSelected]} ${dateSelected}`; 
-      }
+        renderCalendar()
+    }
 
     
 }
@@ -152,3 +166,69 @@ prevNextIcon.forEach(icon => { // getting prev and next icons
         renderCalendar(); // calling renderCalendar function
     });
 });
+
+
+//Counter Input
+let personNum = 0
+let durationNum = 0
+
+let Person = document.querySelector(".controllerContainer.Person")
+let Duration = document.querySelector(".controllerContainer.Duration")
+
+function decrementCounterPerson(){
+    let placeholder = document.querySelector(".placeholder.Person")
+    if(personNum <= 0){
+        placeholder.innerText = "Choose Person"
+        return
+    }
+    personNum--
+    if(personNum <= 0){
+        placeholder.innerText = "Choose Person"
+        return
+    }
+    placeholder.innerText = personNum
+}
+
+function incrementCounterPerson(){
+    let placeholder = document.querySelector(".placeholder.Person")
+    if(personNum >= 4){
+        return
+    }
+    personNum++
+    placeholder.innerText = personNum
+}
+
+function decrementCounterDuration(){
+    let placeholder = document.querySelector(".placeholder.Duration")
+    if(durationNum <= 0){
+        placeholder.innerText = "Choose Duration"
+        return
+    }
+    durationNum--
+    if(durationNum <= 0){
+        placeholder.innerText = "Choose Duration"
+        return
+    }
+    placeholder.innerText = durationNum
+}
+
+function incrementCounterDuration(){
+    let placeholder = document.querySelector(".placeholder.Duration")
+    if(durationNum >= 2){
+        return
+    }
+    durationNum++
+    placeholder.innerText = durationNum
+}
+
+Person.childNodes[1].addEventListener("click", decrementCounterPerson)
+Person.childNodes[5].addEventListener("click", incrementCounterPerson)
+Duration.childNodes[1].addEventListener("click", decrementCounterDuration)
+Duration.childNodes[5].addEventListener("click", incrementCounterDuration)
+
+
+
+// for (let i = 0; i < items.length; i++) {
+//     const item = items[i];
+//     item.addEventListener("click", changeActiveClass);
+// }

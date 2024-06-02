@@ -52,67 +52,114 @@
             </div>
         </div>
 
-        <div class="reservationForm">
+        <form class="reservationForm">
             <h1>Reservation Form</h1>
             <div class="boxContainer">
                 <div class="inputContainer">
                     <h2>Person</h2>
                     <div class="inputBox">
                         <img src="../assets/assets booking detail/Vector_black.png" alt="">
-                        <p class="placeholder">Choose Person</p>
+                        <p class="placeholder Person">Choose Person</p>
+                        <div class="controllerContainer Person">
+                            <span id="minus">-</span>
+                            <span id="line">|</span>
+                            <span id="plus">+</span>
+                        </div>
                     </div>
                 </div>
                 <div class="inputContainer">
                     <h2>Duration</h2>
                     <div class="inputBox">
                         <img src="../assets/assets booking detail/Vector-1_black.png" alt="">
-                        <p class="placeholder">Choose Person</p>
+                        <p class="placeholder Duration">Choose Duration</p>
+                        <div class="controllerContainer Duration">
+                            <span id="minus">-</span>
+                            <span id="line">|</span>
+                            <span id="plus">+</span>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="boxContainer">
                 <div class="inputContainer">
-                    <h2>Person</h2>
+                    <h2>Date</h2>
                     <div class="inputBox">
-                        <img src="../assets/assets booking detail/Vector_black.png" alt="">
-                        <p class="placeholder">Choose Person</p>
+                        <img src="../assets/assets booking detail/Group.png" alt="">
+                        <p class="placeholder">Select Date</p>
                     </div>
                 </div>
                 <div class="inputContainer">
-                    <h2>Person</h2>
+                    <h2>Time</h2>
                     <div class="inputBox">
-                        <img src="../assets/assets booking detail/Vector_black.png" alt="">
-                        <p class="placeholder">Choose Person</p>
+                        <img src="../assets/assets booking detail/Group-1.png" alt="">
+                        <p class="placeholder">Select Time</p>
                     </div>
                 </div>
             </div>
-            <div class="wrapper">
-                <div class="header">
-                    <p class="selected-date"></p>
+
+            <div class="wrapperContainer">
+                <div class="wrapper">
+                    <div class="header">
+                        <p class="selected-date"></p>
+                    </div>
+                    <div class="icons">
+                        <span id="prev"></span>
+                        <p class="current-date"></p>
+                        <span id="next"></span>
+                    </div>
+                    <div class="calendar">
+                        <ul class="weeks">
+                            <li>Mo</li>
+                            <li>Tu</li>
+                            <li>We</li>
+                            <li>Th</li>
+                            <li>Fr</li>
+                            <li>Sa</li>
+                            <li>Su</li>
+                        </ul>
+                        <ul class="days">
+                            <!-- diisi javascript -->
+                        </ul>
+                    </div>
                 </div>
-                <div class="icons">
-                    <span id="prev"></span>
-                    <p class="current-date"></p>
-                    <span id="next"></span>
-                </div>
-                <div class="calendar">
-                    <ul class="weeks">
-                        <li>Mo</li>
-                        <li>Tu</li>
-                        <li>We</li>
-                        <li>Th</li>
-                        <li>Fr</li>
-                        <li>Sa</li>
-                        <li>Su</li>
-                    </ul>
-                    <ul class="days">
-                        <!-- diisi javascript -->
-                    </ul>
+                
+                <div class="wrapper">
+                    <div class="header">
+                        <p class="title">Time Options</p>
+                    </div>
+                    <div class="box">
+                        <div class="statusContainer">
+                            <span id="circle"></span>
+                            <p>Available</p>
+                        </div>
+                        <div class="statusContainer">
+                            <span id="booked"></span>
+                            <p>Booked</p>
+                        </div>
+                    </div>
+                    <div class="optionsContainer">
+                        <p>08:00</p>
+                        <p>09:00</p>
+                        <p>10:00</p>
+                        <p>11:00</p>
+                        <p>12:00</p>
+                        <p>13:00</p>
+                        <p>14:00</p>
+                        <p>15:00</p>
+                        <p>16:00</p>
+                        <p>17:00</p>
+                    </div>
                 </div>
             </div>
-            <input type="checkbox" name="terms" required> I Agree With The Following Facility Terms<br>
-            <button type="submit">Submit</button>
-        </div>
+            
+            <div class="finalizeContainer">
+                <div class="checkbox">
+                    <input type="checkbox" name="terms" required> 
+                    <p>I Agree With The Following Facility Terms</p>
+                </div>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
 
         <div class="facilities-section">
             <h2><span></span>Check Another Facility<span></span></h2>

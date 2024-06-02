@@ -137,11 +137,19 @@ footer {
 .inputContainer h2{
     margin: 0;
     margin-bottom: 5px;
+    color: #015581;
+}
+
+.wrapperContainer{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
 }
 
 .boxContainer{
     display: flex;
     justify-content: space-between;
+    gap: 50px;
 }
 
 .inputBox{
@@ -149,28 +157,52 @@ footer {
     height: 64px;
     border: solid 2px black;
     border-radius: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .inputBox img{
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 12px;
     margin-left: 20px;
 }
 
 .inputBox .placeholder{
     display: inline-block;
-    vertical-align: 11px;
+    vertical-align: 13px;
     margin: 0;
     margin-left: 20px;
     color: #000000a4;
 }
 
+.inputBox .controllerContainer{
+    display: flex;
+    gap: 15px;
+    float: right;
+    font-size: 2em;
+    margin-right: 20px;
+    margin-top: 10px;
+    max-height: 40px;
+}
+
+.controllerContainer #minus{
+    font-size: 1.2em;
+    margin-top: -2px;
+    cursor: pointer;
+}
+.controllerContainer #plus{
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.controllerContainer #line{
+    margin-top: 2px;
+}
+
+
 /* Calender */
 .wrapper{
     width: 570px;
     border-radius: 10px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
     border: solid 2px black;
 }
 
@@ -185,7 +217,12 @@ footer {
   padding: 5px;
   justify-content: space-between;
   background-color: #20A8D8;
-  color: white;
+  color: white; 
+}
+
+.wrapper .title{
+    font-size: 1.7em;
+    font-weight: bolder;
 }
 
 .wrapper .icons{
@@ -240,9 +277,6 @@ footer {
 }
 .days li.inactive{
   color: #aaa;
-}
-.days li.active{
-  color: #fff;
 }
 .days li::before{
   position: absolute;
@@ -306,6 +340,94 @@ footer {
 
 #next:hover {
     background-image: url('../assets/assets homepage/Property\ 1=ArrowRightClicked.png');
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    border-bottom: solid 2px black;
+}
+
+.statusContainer{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 165px;
+}
+
+.statusContainer #circle{
+    display: inline-block;
+    border-radius: 50%;
+    width: 33px;
+    height: 33px;
+    background-color: #E7EAEC;
+}
+
+.statusContainer #booked{
+    display: inline-block;
+    border-radius: 50%;
+    width: 33px;
+    height: 33px;
+    border: 2px solid red;
+    background-color: white;
+}
+
+.statusContainer p{
+    font-size: 1.5em;
+}
+
+.optionsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 45px;
+    margin: 30px 80px;
+}
+
+.optionsContainer p{
+    font-size: 1.8em;
+    border-radius: 15px;
+    padding: 5px 10px;
+    background-color: #E7EAEC;
+    margin: 17px 0;
+}
+
+.finalizeContainer{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.checkbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-weight: bolder;
+}
+
+.checkbox input[type='checkbox'] {
+    width:33px;
+    height:33px;
+    background:white;
+    border-radius:5px;
+}
+
+.finalizeContainer input{
+    width: 33px;
+    height: 33px;
+}
+
+.finalizeContainer button{
+    padding: 20px 70px;
+    background-color: #fff;
+    color: #32766E;
+    border: 5px solid #015581;
+    border-radius: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Carousel */
@@ -381,7 +503,7 @@ footer {
 .facilities-section {
     position: relative;
     text-align: center;
-    margin: 120px 0;
+    margin: 100px 0;
     margin-bottom: 80px;
     padding: 0 80px;
 }
