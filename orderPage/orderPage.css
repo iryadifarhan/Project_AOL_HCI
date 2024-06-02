@@ -1,0 +1,81 @@
+.title{
+    margin-left: 30px;
+    font-weight: bolder;
+}
+
+.groupLuar {
+    background-color: #F6F1E5;
+    position: relative;
+    padding: 2rem;
+    /* align-items: center; */
+}
+
+.groupDalam {
+    border-radius: 10px;
+    margin-bottom: 100px;
+    overflow: hidden;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    padding: 2rem;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.groupDalam h1 {
+    color: #015581;
+    font-weight: bolder;
+    line-height: 2rem;
+}
+
+.groupDalam p {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.detail-btn {
+    position: absolute;
+    bottom: 1rem; 
+    right: 1rem; 
+}
+
+.groupLuarHistory {
+    background-color: #F6F1E5;
+    position: relative;
+    padding: 20px;
+    align-items: center;
+}
+
+.groupDalamHistory {
+    border-radius: 10px;
+    margin: 20px;
+    overflow: hidden;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    padding: 2rem;
+}
+
+.groupDalamHistory h1 {
+    color: #015581;
+    font-weight: bolder;
+    line-height: 2rem;
+}
+
+.groupDalamHistory p {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+
+footer{
+    margin-top: 100px;
+}

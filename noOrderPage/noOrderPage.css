@@ -1,0 +1,298 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    background-color: #fff;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo img {
+    height: 98px;
+    margin-left: 50px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 62px;
+    align-items: center;
+}
+
+.navbar ul li:last-child{
+    margin-right: 50px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s ease;
+    font-size: 1.5em;
+}
+
+/* .navbar ul li a.active{
+    color: #20A8D8;
+} */
+
+.navbar a:hover{
+    color: #20A8D8;
+    text-decoration: underline;
+}
+/* 
+.navbar ul li a.active:hover{
+    text-decoration: underline;
+} */
+
+/* .navbar ul li a.nonActive:hover {
+    color: #20A8D8;
+} */
+
+
+/* carousel */
+.facilities-section {
+    position: relative;
+    text-align: center;
+    margin: 120px 0;
+    margin-bottom: 80px;
+    padding: 0 80px;
+}
+
+.facilities-section h2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #015581;
+}
+
+.facilities-section h2 span {
+    flex: 1;
+    height: 3px;
+    max-width: 406px;
+    background-color: #20A8D8;
+    margin: 0 10px;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-slide {
+    display: flex;
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.carousel-item {
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 300px; /* Tinggi gambar disesuaikan */
+    object-fit: cover; /* Gambar akan menyesuaikan ukuran kontainer tanpa merubah rasio aspek */
+    display: block;
+}
+
+
+.detail-btn {
+    margin-top: 20px;
+    padding: 20px 60px; /* Adjust padding to make the button larger */
+    background-color: #fff; /* Background color white */
+    color: #32766E; /* Border and text color */
+    border: 5px solid #015581; /* Border color and width */
+    border-radius: 10px; /* Optional: Add border radius for rounded corners */
+    font-size: 2em; /* Adjust font size if needed */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition for smooth hover effect */
+}
+
+.detail-btn:hover {
+    background-color: #015581;
+    color: #fff;
+}
+
+.prev-btn, .next-btn {
+    position: absolute;
+    transform: scale(0.9);
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+    border: none;
+    padding: 5px; /* Reduced padding */
+    cursor: pointer;
+    z-index: 100; /* Ensure z-index is high enough */
+    width: 40px; /* Reduced width */
+    height: 50px; /* Reduced height */
+    background-size: cover;
+    background-position: center;
+}
+
+.prev-btn:hover:hover, .next-btn:hover {
+    transform: scale(1.2); /* Enlarge icon on hover */;
+}
+
+.prev-btn {
+    top: 35%;
+    left: 20px;
+    background-image: url('../assets/assets homepage/Property\ 1=ArrowLeft.png');
+}
+
+.next-btn {
+    top: 35%;
+    right: 20px;
+    background-image: url('../assets/assets homepage/Property\ 1=ArrowRight.png');
+}
+
+.prev-btn:hover {
+    background-image: url('../assets/assets homepage/Property\ 1=ArrowLeftClicked.png');
+}
+
+.next-btn:hover {
+    background-image: url('../assets/assets homepage/Property\ 1=ArrowRightClicked.png');
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 40px 0;
+}
+
+.dot{
+    cursor: pointer;
+    width: 33px;
+    height: 33px;
+    background-image: url('../assets/assets global/DiscUnactive.png');
+}
+
+.active-dot {
+    background-image: url('../assets/assets global/DiscActive.png') !important;
+}
+
+.dot:hover{
+    background-image: url('../assets/assets global/DiscHover.png');
+}
+
+.disc{
+    cursor: pointer;
+    width: 33px;
+    height: 33px;
+    background-image: url('../assets/assets homepage/DiscHeader.png');
+}
+
+.active-disc {
+    background-image: url('../assets/assets global/DiscActive.png') !important;
+}
+
+.disc:hover{
+    background-image: url('../assets/assets global/DiscHover.png');
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+body.slide-1 {
+    background-color: #fff; /* Ganti dengan warna latar belakang yang sesuai dengan slide 1 */
+}
+
+body.slide-2 {
+    background-color: #fff; /* Ganti dengan warna latar belakang yang sesuai dengan slide 2 */
+}
+
+footer {
+    background-color: #404A49;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+.footer-content img {
+    height: 98px;
+    margin-bottom: 0px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    display: flex;
+    justify-content: center;
+    min-width: 50px;
+    align-items: center;
+    margin: 15px 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-icons img {
+    height: 35px; /* Adjust the size of the icons here */
+}
+
+.social-icons a:hover {
+    text-decoration: underline;
+}
+
+.footer-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+.footer-nav ul li{
+    width: 133px;
+}
+
+.footer-nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.footer-nav ul li a:hover {
+    text-decoration: underline;
+}
+
+#trademarks{
+    margin: 0;
+    font-size: 1.2em;
+}
