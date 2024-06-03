@@ -213,6 +213,7 @@ function decrementCounterDuration(){
         return
     }
     durationNum--
+    borrowGenerate()
     if(durationNum <= 0){
         placeholder.innerText = "Choose Duration"
         return
@@ -227,6 +228,7 @@ function incrementCounterDuration(){
     }
     durationNum++
     placeholder.innerText = durationNum
+    borrowGenerate()
 }
 
 Person.childNodes[1].addEventListener("click", decrementCounterPerson)
@@ -252,10 +254,17 @@ function borrowGenerate(){
         arrayTime[i].classList.remove("booked")   
     }
     
-    if(daySelected == 0 || flag == false || daySelected === null){   //kalo hari libur jgn generate
-        if(daySelected == 0){
+    if(daySelected == 0 || flag == false || daySelected === null || durationNum <= 0){   //kalo hari libur jgn generate
+        if(daySelected === null){
+            document.getElementsByClassName("unable")[0].classList.remove("hide")
+            document.getElementsByClassName("unable")[0].innerHTML = "<h2>Please select a date first inorder to choose your desired time</h2>"
+        }
+        else if(daySelected == 0){
             document.getElementsByClassName("unable")[0].classList.remove("hide")
             document.getElementsByClassName("unable")[0].innerHTML = "<h2>Please select an active campus day</h2>"
+        }else if(durationNum <= 0){
+            document.getElementsByClassName("unable")[0].classList.remove("hide")
+            document.getElementsByClassName("unable")[0].innerHTML = "<h2>Please choose a valid desired duration timeplay</h2>"
         }
         return
     }
