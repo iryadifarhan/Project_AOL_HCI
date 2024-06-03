@@ -64,6 +64,9 @@ let daySelected = null
 
 let items = null
 
+// flag buat tanda bahwa borrow section sudah digenerate
+let flag = false
+
 // getting new date, current year and month
 let date = new Date(),
 currYear = date.getFullYear(),
@@ -114,7 +117,7 @@ const renderCalendar = () => {
     for (let i = 0; i < items.length; i++) {
         const item = items[i];
         item.addEventListener("click", changeActiveClass);
-      }
+    }
       
       function changeActiveClass(e)
       {
@@ -143,11 +146,16 @@ const renderCalendar = () => {
         daySelected = new Date(dateFormat).getDay()
 
         selectedDate.innerText = `${yearSelected}, ${weekday[daySelected]} ${months[monthSelected]} ${dateSelected}`; 
+        
+        if(flag == true){
+            borrowGenerate()
+        }
         renderCalendar()
     }
 
     
 }
+
 renderCalendar();
 
 prevNextIcon.forEach(icon => { // getting prev and next icons
@@ -227,8 +235,51 @@ Duration.childNodes[1].addEventListener("click", decrementCounterDuration)
 Duration.childNodes[5].addEventListener("click", incrementCounterDuration)
 
 
+//Time input
+let timeContainer = document.querySelector(".optionsContainer")
+const times = ["08:00","09:00","10:00","11:00","12:00",'13:00',"14:00","15:00","16:00","17:00"]
 
-// for (let i = 0; i < items.length; i++) {
-//     const item = items[i];
-//     item.addEventListener("click", changeActiveClass);
-// }
+function borrowGenerate(){
+    let timeTag = ""
+    for(let i = 0 ; i < times.length ; i++){
+        timeTag += `<p>${times[i]}</p>`
+    }
+    
+    timeContainer.innerHTML = timeTag
+    
+    let arrayTime = document.querySelectorAll(".optionsContainer p")
+    for (let i = 0; i < arrayTime.length; i++) {
+        arrayTime[i].classList.remove("booked")   
+    }
+    
+    if(daySelected == 0 || flag == false || daySelected === null){   //kalo hari libur jgn generate
+        if(daySelected == 0){
+            document.getElementsByClassName("unable")[0].classList.remove("hide")
+            document.getElementsByClassName("unable")[0].innerHTML = "<h2>Please select an active campus day</h2>"
+        }
+        return
+    }
+
+    document.getElementsByClassName("unable")[0].classList.add("hide")
+    
+    let borrowRandCount = Math.floor(Math.random() * 5)     //Jumlah jam dipinjam maksimal 4
+    
+    for(let i = 0 ; i < borrowRandCount ; i++){
+        let borrowTimeRand = Math.floor(Math.random() * 10)
+        arrayTime[borrowTimeRand].classList.add('booked')
+    }
+    
+    for(let i = 0 ; i < arrayTime.length ; i++){
+        if(arrayTime[i].classList.contains("booked") == false){
+            arrayTime[i].addEventListener("click",timePress)
+        }
+    }
+    
+}
+borrowGenerate()
+flag = true
+
+function timePress(e){
+    e.target.classList.add("selected")
+}
+

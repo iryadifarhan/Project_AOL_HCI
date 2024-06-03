@@ -391,6 +391,45 @@ footer {
     padding: 5px 10px;
     background-color: #E7EAEC;
     margin: 17px 0;
+    cursor: pointer;
+}
+
+.optionsContainer p:hover{
+    background-color: white;
+    padding: 2px 7.5px;
+    border: solid 3px #20A8D8;
+}
+
+.optionsContainer .selected{
+    background-color: #72CAE8 !important;
+}
+
+.optionsContainer .booked{
+    background-color: white;
+    padding: 2px 7.5px;
+    border: solid 3px red !important;
+}
+
+.unable{
+    width: 570px;
+    height: 367px;
+    position: absolute;
+    border-radius: 7px;
+    background-color: #00000089;
+    backdrop-filter: blur(4px);
+    color: white;
+}
+
+.unable h2{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.hide{
+    display: none;
 }
 
 .finalizeContainer{
