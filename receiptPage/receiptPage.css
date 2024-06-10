@@ -1,0 +1,238 @@
+/*start header footer*/
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    background-color: #fff;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo img {
+    height: 98px;
+    margin-left: 50px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 62px;
+    align-items: center;
+}
+
+.navbar ul li:last-child{
+    margin-right: 50px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s ease;
+    font-size: 1.5em;
+}
+
+.navbar ul li a.active{
+    color: #20A8D8;
+}
+
+.navbar ul li a.active:hover{
+    text-decoration: underline;
+}
+
+.navbar ul li a.nonActive:hover {
+    color: #20A8D8;
+}
+
+
+footer {
+    background-color: #404A49;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+.footer-content img {
+    height: 98px;
+    margin-bottom: 0px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    display: flex;
+    justify-content: center;
+    min-width: 50px;
+    align-items: center;
+    margin: 15px 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-icons img {
+    height: 35px; /* Adjust the size of the icons here */
+    margin-right: 5px; /* Add some space between the icon and text */
+}
+
+.social-icons a:hover {
+    text-decoration: underline;
+}
+
+.footer-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+.footer-nav ul li{
+    width: 133px;
+}
+
+.footer-nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.footer-nav ul li a:hover {
+    text-decoration: underline;
+}
+
+#trademarks{
+    margin: 0;
+    font-size: 1.2em;
+}
+/*end header footer*/
+
+/*container*/
+.container{
+    text-align: center;
+    position: relative;
+    margin: 10% auto;
+    width: 75%;
+    height: 50%;
+    background-color: #20A8D8;
+    border: solid #000 5px;
+    border-radius: 5px;
+}
+
+#silangLogo{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(30px) translateX(-30px) scaleX(0.8) scaleY(0.8);
+}
+
+.container h1 {
+    color: white;
+    margin: 30px 0;
+    margin-bottom: 50px;
+    padding: 10px 0;
+    font-weight: bolder;
+    font-size: 2.3em;
+}
+/* akhir container */
+
+/* bagian atas container */
+.alert{
+    color: white;
+    border: solid red 3px;
+    border-radius: 5px;
+    max-width: 70%;
+    text-align: center;
+    align-items: center;
+    margin: 3% auto;
+}
+
+.alert_text{
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+.qrimg img{
+    width: 250px;
+    height: 250px;
+}
+.qrimg h3{
+    color: white;
+    margin-bottom: 5%;
+    font-size: 1.5rem;
+}
+/*akhir bagian atas container*/
+
+/* bagian informasi */
+.tab-informasi{
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    width: 80%;
+    max-width: 760px;
+    text-align: left;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 15px 0;
+}
+.informasi-peminjam{
+    max-width: 50%;
+}
+.informasi-peminjam h2{
+    color: #20A8D8;
+}
+.informasi-peminjam h3{
+    color: #015581;
+}
+.informasi-fasilitas{
+    max-width: 50%;
+}
+.item{
+    margin-top: 50px;
+}
+
+.informasi-fasilitas h2{
+    color: #20A8D8;
+}
+.informasi-fasilitas h3{
+    color: #015581;
+}
+.middle-line{
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    max-height: 695px;
+    margin-top: 15px;
+    background-color: #015581;
+}
+/* akhir bagian informasi */
+
+/*button pdf*/
+.pdfbutton{
+    background-color: white;
+    border-radius: 5px;
+    width: 200px;
+    height: 60px;
+    color: #015581;
+    font-size: larger;
+    font-weight: bold;
+    margin: 30px;
+}
