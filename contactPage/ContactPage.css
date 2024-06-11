@@ -129,14 +129,14 @@ footer {
     max-width: 100%;
     margin: 0 auto;
     padding: 20px;
-    background-image: url("image 13.png");
+    background-image: url("../assets/assets contactUs/image 13.png");
     background-color: #ccc;
     background-size: cover;
     background-position: center;
 }
 .background-contact-info{ /* abu2 background*/
     max-width: 80%;
-    background-color: #404a4981;
+    background-color: #35515b84;
     /* opacity: 0.5; */
     margin: 0 auto;
 }
@@ -144,6 +144,7 @@ footer {
     max-width: 100%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     text-align: center;
     padding: 40px 20px;
     margin: 0 auto;
@@ -158,6 +159,7 @@ footer {
 }
 .contact-info div h3 {
     margin: 10px 0;
+    font-size: 2em;
 }
 .contact-form {
     text-align: center;
