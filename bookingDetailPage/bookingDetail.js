@@ -148,7 +148,7 @@ const renderCalendar = () => {
         selectedDate.innerText = `${yearSelected}, ${weekday[daySelected]} ${months[monthSelected]} ${dateSelected}`; 
         
         if(flag == true){
-            borrowGenerate()
+            borrowGenerate("new")
         }
         renderCalendar()
     }
@@ -185,15 +185,17 @@ let Duration = document.querySelector(".controllerContainer.Duration")
 
 function decrementCounterPerson(){
     let placeholder = document.querySelector(".placeholder.Person")
-    if(personNum <= 0){
-        placeholder.innerText = "Choose Person"
+    
+    if(personNum == 0){
         return
     }
     personNum--
+    borrowGenerate()
     if(personNum <= 0){
         placeholder.innerText = "Choose Person"
         return
     }
+    
     placeholder.innerText = personNum
 }
 
@@ -204,12 +206,12 @@ function incrementCounterPerson(){
     }
     personNum++
     placeholder.innerText = personNum
+    borrowGenerate()
 }
 
 function decrementCounterDuration(){
     let placeholder = document.querySelector(".placeholder.Duration")
-    if(durationNum <= 0){
-        placeholder.innerText = "Choose Duration"
+    if(durationNum == 0){
         return
     }
     durationNum--
@@ -241,20 +243,35 @@ Duration.childNodes[5].addEventListener("click", incrementCounterDuration)
 let timeContainer = document.querySelector(".optionsContainer")
 const times = ["08:00","09:00","10:00","11:00","12:00",'13:00',"14:00","15:00","16:00","17:00"]
 
-function borrowGenerate(){
-    let timeTag = ""
-    for(let i = 0 ; i < times.length ; i++){
-        timeTag += `<p>${times[i]}</p>`
-    }
-    
-    timeContainer.innerHTML = timeTag
-    
+function borrowGenerate(condition){
     let arrayTime = document.querySelectorAll(".optionsContainer p")
-    for (let i = 0; i < arrayTime.length; i++) {
-        arrayTime[i].classList.remove("booked")   
+
+    if(condition == "new"){
+        let timeTag = ""
+        for(let i = 0 ; i < times.length ; i++){
+            timeTag += `<p>${times[i]}</p>`
+        }
+
+        timeContainer.innerHTML = timeTag
+        arrayTime = document.querySelectorAll(".optionsContainer p")
+
+        if(daySelected != 0 && flag != false){
+            for (let i = 0; i < arrayTime.length; i++) {
+            arrayTime[i].classList.remove("booked")   
+            }
+
+            let borrowRandCount = Math.floor(Math.random() * 5)     //Jumlah jam dipinjam maksimal 4
+        
+            for(let i = 0 ; i < borrowRandCount ; i++){
+                let borrowTimeRand = Math.floor(Math.random() * 10)
+                arrayTime[borrowTimeRand].classList.add('booked')
+            }
+        }
+
+        
     }
     
-    if(daySelected == 0 || flag == false || daySelected === null || durationNum <= 0){   //kalo hari libur jgn generate
+    if(daySelected == 0 || flag == false || daySelected === null || durationNum <= 0 || personNum <= 0){   //kalo hari libur jgn generate
         if(daySelected === null){
             document.getElementsByClassName("unable")[0].classList.remove("hide")
             document.getElementsByClassName("unable")[0].innerHTML = "<h2>Please select a date first inorder to choose your desired time</h2>"
@@ -262,6 +279,9 @@ function borrowGenerate(){
         else if(daySelected == 0){
             document.getElementsByClassName("unable")[0].classList.remove("hide")
             document.getElementsByClassName("unable")[0].innerHTML = "<h2>Please select an active campus day</h2>"
+        }else if(personNum <= 0){
+            document.getElementsByClassName("unable")[0].classList.remove("hide")
+            document.getElementsByClassName("unable")[0].innerHTML = "<h2>Please choose a valid number of player</h2>"
         }else if(durationNum <= 0){
             document.getElementsByClassName("unable")[0].classList.remove("hide")
             document.getElementsByClassName("unable")[0].innerHTML = "<h2>Please choose a valid desired duration timeplay</h2>"
@@ -271,13 +291,6 @@ function borrowGenerate(){
 
     document.getElementsByClassName("unable")[0].classList.add("hide")
     
-    let borrowRandCount = Math.floor(Math.random() * 5)     //Jumlah jam dipinjam maksimal 4
-    
-    for(let i = 0 ; i < borrowRandCount ; i++){
-        let borrowTimeRand = Math.floor(Math.random() * 10)
-        arrayTime[borrowTimeRand].classList.add('booked')
-    }
-    
     for(let i = 0 ; i < arrayTime.length ; i++){
         if(arrayTime[i].classList.contains("booked") == false){
             arrayTime[i].addEventListener("click",timePress)
@@ -285,10 +298,32 @@ function borrowGenerate(){
     }
     
 }
-borrowGenerate()
+
+borrowGenerate("new")
 flag = true
 
+let bookCount = 0
+
 function timePress(e){
-    e.target.classList.add("selected")
+    if(e.target.classList.contains("selected")){
+        e.target.classList.remove("selected")
+        bookCount-=1
+    }else{
+        if(durationNum <= bookCount){
+            alert("durasi yang dipinjam sudah maks!")
+        }else{
+            e.target.classList.add("selected")
+            bookCount+=1
+        }
+    }
 }
 
+var checkbox = document.querySelector(".checkbox input")
+
+document.querySelector("#submitButton").addEventListener("click", function(event){
+    event.preventDefault()
+    console.log(checkbox.checked)
+    if(checkbox.checked == true){
+        location.href = "../receiptPage/receiptPage.html";
+    }
+});

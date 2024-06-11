@@ -5,17 +5,16 @@
     <link rel="shortcut icon" href="../assets/assets global/icon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-    <link rel="stylesheet" href="./login.css">
-    <link rel="stylesheet" href="receiptPage.css">
+    <link rel="stylesheet" href="./receiptPage.css">
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="../assets/assets global/HomeLogo.png" alt="BINUS University Logo"> <!-- Ganti dengan logo BINUS -->
+            <a href="../homePage/homepage.html"><img src="../assets/assets global/HomeLogo.png" alt="BINUS University Logo"></a> <!-- Ganti dengan logo BINUS -->
         </div>
         <nav class="navbar">
             <ul>
-                <li><a class="nonActive" href="../homepage.html">Home</a></li>
+                <li><a class="nonActive" href="../homePage/homepage.html">Home</a></li>
                 <li><a class="active" href="../bookingPage/booking.html">Booking</a></li>
                 <li><a class="nonActive" href="../contactPage/ContactPage.html">Contact Us</a></li>
                 <li><img src="../assets/assets global/profileNav.png" alt=""></li>
@@ -26,7 +25,10 @@
     <main>
         <div class="container">
             <h1>Receipt Peminjaman Fasilitas</h1>
-            <img src="../assets/assets receiptPage/Vector (16).png" id="silangLogo" alt="silang">
+            <a href="../orderPage/orderPage.html">
+                <img src="../assets/assets receiptPage/Vector (16).png" id="silangLogo" alt="silang">
+            </a>
+            
 
             <div class="alert">
                 <p class="alert_text">Mohon Untuk Menampilkan Receipt Ini Sebagai Bukti Saat Pengklaiman Fasilitas</p>
@@ -90,12 +92,12 @@
 
     <footer>
         <div class="footer-content">
-            <img src="../assets/assets global/HomeLogo.png" alt="Footer Logo"> <!-- Ganti dengan gambar footer -->
+            <a href="../homePage/homepage.html"><img src="../assets/assets global/HomeLogo.png" alt="Footer Logo"></a>
             <nav class="footer-nav">
                 <ul>
-                    <li><a href="../homepage.html">Home</a></li>
+                    <li><a href="../homePage/homepage.html">Home</a></li>
                     <li><a href="../bookingPage/booking.html">Booking</a></li>
-                    <li><a href="../contactPage/ContactPage.html">Contact Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
                 </ul>
             </nav>
             <div class="social-icons">
@@ -109,10 +111,8 @@
                     <img src="../assets/footer icon/Vector-2.png" alt="LinkedIn Icon">
                 </a>
             </div>
-            <p>Copyright &copy; 2024 Student Support Office | Bina Nusantara University</p>
+            <p id="trademarks">Copyright &copy; 2024 Student Support Office | Bina Nusantara University</p>
         </div>
     </footer>
-
-    <script src="./login.js"></script>
 </body>
 </html>

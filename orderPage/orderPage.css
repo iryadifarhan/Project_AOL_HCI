@@ -10,6 +10,10 @@
     /* align-items: center; */
 }
 
+main{
+    margin-bottom: 100px;
+}
+
 .groupDalam {
     border-radius: 10px;
     margin-bottom: 100px;
@@ -36,6 +40,7 @@
 
 .groupDalam p {
     font-size: 1.2rem;
+    text-align: center;
     font-weight: 500;
 }
 
@@ -72,10 +77,6 @@
 
 .groupDalamHistory p {
     font-size: 1.2rem;
+    text-align: center;
     font-weight: 500;
-}
-
-
-footer{
-    margin-top: 100px;
 }
