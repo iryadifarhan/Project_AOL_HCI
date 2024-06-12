@@ -290,6 +290,7 @@ label{
     flex-direction: column;
     min-width: 76px;
     gap: 5px;
+    align-items: center;
 }
 
 input[type=radio] {
