@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../assets/assets global/icon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="rp_pengembalian.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="../homePage/homepage.html"><img src="../assets/assets global/HomeLogo.png" alt="BINUS University Logo"></a> <!-- Ganti dengan logo BINUS -->
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a class="nonActive" href="../homePage/homepage.html">Home</a></li>
+                <li><a class="active" href="../bookingPage/booking.html">Booking</a></li>
+                <li><a class="nonActive" href="../contactPage/ContactPage.html">Contact Us</a></li>
+                <li><img src="../assets/assets global/profileNav.png" alt=""></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Receipt Pengembalian Fasilitas</h1>
+            <a href="../orderPage/orderPage.html">
+                <img src="../assets/assets receiptPage/Vector (16).png" id="silangLogo" alt="silang">
+            </a>
+            
+
+            <div class="alert">
+                <p class="alert_text">Mohon Untuk Menampilkan Receipt Ini Sebagai Bukti Saat Pengklaiman Fasilitas</p>
+            </div>
+            <div class="camimg">
+                <img src="icons8-camera-100.png" alt="cam">
+                <h3>Scan QR Fasilitas yang Dipinjam</h3>
+            </div>
+
+            <div class="input-container">
+                <img src="icons8-picture-30.png" alt="Picture Icon" class="file-icon">
+                <label for="file-upload" class="custom-file-upload">
+                    Please Scan QR!
+                </label>
+                <input id="file-upload" type="file">
+           </div>
+           
+            <div class="tab-informasi">
+                <div class="informasi-feedback">
+                    <h2>Feedback Sistem Peminjaman Fasilitas</h2>
+                    <h3>Your Experience</h3>
+                    <div class="item">
+                        <label>
+                            <span>Poor</span>
+                            <input type="radio" name="experience" value="poor">
+                        </label>
+                        <label>
+                            <span>Bad</span>
+                            <input type="radio" name="experience" value="bad">
+                        </label>
+                        <label>
+                            <span>Normal</span>
+                            <input type="radio" name="experience" value="normal">
+                        </label>
+                        <label>
+                            <span>Good</span>
+                            <input type="radio" name="experience" value="good">
+                        </label>
+                        <label>
+                            <span>Excellent</span>
+                            <input type="radio" name="experience" value="excellent">
+                        </label>
+                    </div>
+
+                    <h3>Condition of Facilities</h3>
+                    <div class="item">
+                        <label>
+                            <span>Poor</span>
+                            <input type="radio" name="facilities" value="poor">
+                        </label>
+                        <label>
+                            <span>Bad</span>
+                            <input type="radio" name="facilities" value="bad">
+                        </label>
+                        <label>
+                            <span>Normal</span>
+                            <input type="radio" name="facilities" value="normal">
+                        </label>
+                        <label>
+                            <span>Good</span>
+                            <input type="radio" name="facilities" value="good">
+                        </label>
+                        <label>
+                            <span>Excellent</span>
+                            <input type="radio" name="facilities" value="excellent">
+                        </label>
+                    </div>
+                    
+                    <h3>Staff Service</h3>
+                    <div class="item">
+                        <label>
+                            <span>Poor</span>
+                            <input type="radio" name="service" value="poor">
+                        </label>
+                        <label>
+                            <span>Bad</span>
+                            <input type="radio" name="service" value="bad">
+                        </label>
+                        <label>
+                            <span>Normal</span>
+                            <input type="radio" name="service" value="normal">
+                        </label>
+                        <label>
+                            <span>Good</span>
+                            <input type="radio" name="service" value="good">
+                        </label>
+                        <label>
+                            <span>Excellent</span>
+                            <input type="radio" name="service" value="excellent">
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="agree-section">
+                <label><input type="checkbox" name="terms"> I Agree With The Following Facility Terms</label>
+            </div>
+
+            <button type="submit" class="submitbutton">Submit</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <a href="../homePage/homepage.html"><img src="../assets/assets global/HomeLogo.png" alt="Footer Logo"></a>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="../homePage/homepage.html">Home</a></li>
+                    <li><a href="../bookingPage/booking.html">Booking</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <a href="mailto:support@binus.ac.id">
+                    <img src="../assets/footer icon/Vector.png" alt="Email Icon">
+                </a>
+                <a href="https://www.instagram.com/binus_university/">
+                    <img src="../assets/footer icon/Vector-1.png" alt="Instagram Icon">
+                </a>
+                <a href="https://www.linkedin.com/school/binus-university/">
+                    <img src="../assets/footer icon/Vector-2.png" alt="LinkedIn Icon">
+                </a>
+            </div>
+            <p id="trademarks">Copyright &copy; 2024 Student Support Office | Bina Nusantara University</p>
+        </div>
+    </footer>
+</body>
+</html>
