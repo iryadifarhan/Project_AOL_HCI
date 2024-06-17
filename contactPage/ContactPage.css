@@ -4,6 +4,10 @@ body {
     font-family: Arial, sans-serif;
 }
 
+* ::-webkit-scrollbar{
+    display: none;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -88,8 +92,8 @@ footer {
 }
 
 .social-icons img {
-    height: 35px; /* Adjust the size of the icons here */
-    margin-right: 5px; /* Add some space between the icon and text */
+    height: 35px; 
+    margin-right: 5px; 
 }
 
 .social-icons a:hover {
@@ -124,6 +128,7 @@ footer {
     font-size: 1.2em;
 }
 /*end header footer*/
+
 /* container address email whatsapp*/
 .container { /*bagian address whatsapp dan email */
     max-width: 100%;
@@ -139,6 +144,7 @@ footer {
     background-color: #35515b84;
     /* opacity: 0.5; */
     margin: 0 auto;
+    border-radius: 5px;
 }
 .contact-info {
     max-width: 100%;
@@ -163,50 +169,84 @@ footer {
 }
 .contact-form {
     text-align: center;
-    margin-top: 20px;
-    margin-left: 350px;
-    margin-right: 350px;
+    margin: 20px auto;
     padding: 20px;
     background-color: #fff;
-    border-top: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 12px 15px rgba(0, 0, 0, 0.1); 
+    max-width: 600px;   
 }
-.contact-form input, .contact-form textarea {
+
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #20A8D8;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
     width: 100%;
     padding: 10px;
-    margin: 10px 0;
+    margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
 }
-.contact-form input[type="checkbox"] {
+
+.form-group input[type="text"]:focus,
+.form-group textarea:focus {
+    border-color: #20A8D8; 
+    box-shadow: 0 0 8px rgba(32, 168, 216, 0.5);
+    outline: none; 
+}
+
+.form-group input[type="checkbox"] {
     width: auto;
-    border: 5px solid black;
-    border-radius: 10px;
-    margin-top: 30px;
+    margin-right: 10px;
+    vertical-align: middle;
 }
-.contact-form button {
-    margin-top: 20px;
-    padding: 20px 60px; /* Adjust padding to make the button larger */
-    background-color: #fff; /* Background color white */
-    color: #32766E; /* Border and text color */
-    border: 5px solid #015581; /* Border color and width */
-    border-radius: 10px; /* Optional: Add border radius for rounded corners */
-    font-size: 2em; /* Adjust font size if needed */
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    margin-bottom: 50px;
+
+.form-group label[for="terms"] {
+    display: inline;
+    color: #000;
+    font-size: 15px;
+    font-weight: lighter;
 }
-.contact-form button:hover {
+
+button[type="submit"] {
+    padding: 10px 40px;
     background-color: #015581;
     color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+button[type="submit"]:hover {
+    background-color: #20A8D8;
+    transform: translateY(-3px);
+    transition: 0.6s ease-in-out;
+}
+
 .contact-form h1{
     font-weight: 1000;
+    font-size: 48px;
     color: black;
+    margin-bottom: 20px;
 }
 .contact-form h2{
+    font-size: 24px;
     text-align: left;
     color: #20A8D8;
 }
-/*end container address email whatsapp*/
-
-
