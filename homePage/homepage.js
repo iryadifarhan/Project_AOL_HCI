@@ -47,6 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// profile pop up
 document.addEventListener("DOMContentLoaded", function () {
 const profileNav = document.querySelector('.navbar img[alt=""]');
 const profilePopup = document.getElementById("profile-popup");
