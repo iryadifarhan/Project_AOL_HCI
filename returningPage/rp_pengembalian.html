@@ -20,6 +20,40 @@
                 <li><img src="../assets/assets global/profileNav.png" alt=""></li>
             </ul>
         </nav>
+        <!-- Profile Pop-up -->
+        <div id="profile-popup" class="popup-container">
+            <div class="popup-content">
+                <div class="profile-info">
+                    <img src="../assets/assets global/c5a8d90b-5b15-42b3-b85e-ba46cb44e003 1.png" alt="Profile Image" class="profile-image">
+                    <div class="profile-details">
+                        <p class="profile-name">Muhammad Rifaldi Djalal</p>
+                        <p class="profile-nim">2602205364</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="profile-options">
+                    <div class="profile-option">
+                    <a href="../bookingDetailPage/bookingDetail.html">
+                        <img src="../assets/assets global/Frame 247.png" alt="Order Icon" class="option-icon">
+                    </a>
+                        <a href="../noOrderPage/noOrderPage.html" class="option-text">Your Order</a>
+                    </div>
+                    <div class="profile-option">
+                        <img src="../assets/assets global/Vector (16).png" alt="Privacy Icon" class="option-icon">
+                        <p class="option-text" onclick="showPrivacyPolicy()">Privacy Policy</p>
+                    </div>
+                    <div class="profile-option">
+                        <img src="../assets/assets global/Group (1).png" alt="Terms Icon" class="option-icon">
+                        <p class="option-text" onclick="showTermsConditions()">Terms and Condition</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="profile-logout">
+                    <img src="../assets/assets global/Vector (17).png" alt="Logout Icon" class="option-icon" onclick="logout()">
+                    <p class="option-text" onclick="logout()">Logout</p>
+                </div>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -155,5 +189,7 @@
             <p id="trademarks">Copyright &copy; 2024 Student Support Office | Bina Nusantara University</p>
         </div>
     </footer>
+
+    <script src="./rp_pengembalian.js"></script>
 </body>
 </html>
