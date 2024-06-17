@@ -40,6 +40,7 @@ header {
 
 .navbar ul li:last-child{
     margin-right: 50px;
+    cursor: pointer;
 }
 
 .navbar ul li a {
