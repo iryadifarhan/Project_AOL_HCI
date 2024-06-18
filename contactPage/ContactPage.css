@@ -134,15 +134,15 @@ footer {
     max-width: 100%;
     margin: 0 auto;
     padding: 20px;
-    background-image: url("../assets/assets contactUs/image 13.png");
+    background-image: url("../assets/assets homepage/BackgroundImage1.png");
     background-color: #ccc;
     background-size: cover;
-    background-position: center;
 }
 .background-contact-info{ /* abu2 background*/
     max-width: 80%;
     background-color: #35515b84;
     /* opacity: 0.5; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin: 0 auto;
     border-radius: 5px;
 }
