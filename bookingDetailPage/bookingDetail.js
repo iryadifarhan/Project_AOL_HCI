@@ -61,11 +61,15 @@ let monthSelected = null
 let yearSelected = null
 let dateFormat = null
 let daySelected = null
+let timeDaySelected = null
 
 let items = null
 
 // flag buat tanda bahwa borrow section sudah digenerate
 let flag = false
+
+// flag buat tanda bahwa lampau
+let pastFlag = true
 
 // tanda untuk ngasih tau seberapa banyak jam yang dipencet
 let bookCount = 0
@@ -74,6 +78,8 @@ let bookCount = 0
 let date = new Date(),
 currYear = date.getFullYear(),
 currMonth = date.getMonth();
+
+let dateTime = new Date(`${currYear}-${currMonth+1}-${Number(date.getDate())}`).getTime()
 
 // storing full name of all months in array
 const months = ["January", "February", "March", "April", "May", "June", "July",
@@ -148,7 +154,14 @@ const renderCalendar = () => {
         yearSelected = currYear;
         dateFormat = `${yearSelected}-${monthSelected+1}-${dateSelected}`
         daySelected = new Date(dateFormat).getDay()
+        timeDaySelected = new Date(dateFormat).getTime()
 
+        if(timeDaySelected < dateTime){
+            pastFlag = true
+        }else{
+            pastFlag = false
+        }
+        
         selectedDate.innerText = `${yearSelected}, ${weekday[daySelected]} ${months[monthSelected]} ${dateSelected}`; 
         
         if(flag == true){
@@ -259,11 +272,11 @@ function borrowGenerate(condition){
         timeContainer.innerHTML = timeTag
         arrayTime = document.querySelectorAll(".optionsContainer p")
 
-        if(daySelected != 0 && flag != false){
+        if(daySelected != 0 && flag != false && pastFlag != true){
             for (let i = 0; i < arrayTime.length; i++) {
             arrayTime[i].classList.remove("booked")   
             }
-
+            
             let borrowRandCount = Math.floor(Math.random() * 5)     //Jumlah jam dipinjam maksimal 4
         
             for(let i = 0 ; i < borrowRandCount ; i++){
@@ -275,10 +288,13 @@ function borrowGenerate(condition){
         
     }
     
-    if(daySelected == 0 || flag == false || daySelected === null || durationNum <= 0 || personNum <= 0){   //kalo hari libur jgn generate
+    if(daySelected == 0 || flag == false || daySelected === null || durationNum <= 0 || personNum <= 0 || pastFlag == true){   //kalo hari libur jgn generate
         if(daySelected === null){
             document.getElementsByClassName("unable")[0].classList.remove("hide")
             document.getElementsByClassName("unable")[0].innerHTML = "<h2>Please select a date first inorder to choose your desired time</h2>"
+        }else if(pastFlag == true){
+            document.getElementsByClassName("unable")[0].classList.remove("hide")
+            document.getElementsByClassName("unable")[0].innerHTML = "<h2>Please select a future date</h2>"
         }
         else if(daySelected == 0){
             document.getElementsByClassName("unable")[0].classList.remove("hide")
