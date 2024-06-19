@@ -209,7 +209,6 @@ footer {
 .wrapper{
     max-width: 570px;
     width: 100%;
-    height: 100%;
     max-height: 540px;
     border-radius: 10px;
     border: solid 2px black;
@@ -392,14 +391,23 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     column-gap: 45px;
-    margin: 30px 80px;
+    margin: 13px 0;
+    padding: 0 80px;
+    max-height: 350px;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
-@media only screen and (max-width: 1350px) {
-    .optionsContainer{
-        margin: 0;
-    }
-}
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .example {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
 
 .optionsContainer p{
     font-size: 1.8em;
