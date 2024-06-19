@@ -67,6 +67,9 @@ let items = null
 // flag buat tanda bahwa borrow section sudah digenerate
 let flag = false
 
+// tanda untuk ngasih tau seberapa banyak jam yang dipencet
+let bookCount = 0
+
 // getting new date, current year and month
 let date = new Date(),
 currYear = date.getFullYear(),
@@ -84,6 +87,7 @@ const renderCalendar = () => {
     lastDateofLastMonth = new Date(currYear, currMonth, 0).getDate(); // getting last date of previous month
     let liTag = "";
     
+    bookCount = 0
     let count = 0
 
     for (let i = firstDayofMonth; i > 0; i--) { // creating li of previous month last days
@@ -301,8 +305,6 @@ function borrowGenerate(condition){
 
 borrowGenerate("new")
 flag = true
-
-let bookCount = 0
 
 function timePress(e){
     if(e.target.classList.contains("selected")){
